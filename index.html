@@ -79,7 +79,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 			   .attr("cy", function(d) {
 			   		return h - d * 4 + xScale.rangeBand();
 			   })
-			   .attr('r', xScale.rangeBand());
+			   .attr('r', 12);
 
         svg.selectAll("text")
    .data(dataset)
@@ -96,7 +96,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
         return xScale(i) + xScale.rangeBand() / 2;
    })
    .attr("y", function(d) {
-        return h - d * 4 + xScale.rangeBand();
+        return h - d * 4 + 12;
    });
 		  //New data successfully bound, sir!
     });			
@@ -133,9 +133,9 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 			   		return xScale(i) / 2;
 			   })
 			   .attr("cy", function(d) {
-			   		return h - d * 4 + xScale.rangeBand();
+			   		return h - d * 4 + 12;
 			   })
-			   .attr('r', xScale.rangeBand());
+			   .attr('r', 12);
 
 		    svg.selectAll("text")
 		    	.data(dataset)
@@ -146,7 +146,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
         			return xScale(i) + xScale.rangeBand() / 2;
    				})
    			.attr("y", function(d) {
-        			return h - d * 4 + xScale.rangeBand();
+        			return h - d * 4 + 12;
    				})
 		        .attr("font-family", "sans-serif")
     			.attr("font-size", "11px")
