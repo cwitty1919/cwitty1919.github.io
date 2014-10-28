@@ -118,7 +118,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 		    	.append("text")
 		    	.text(function (d) {return d; } )
 		    	.attr("x", function(d, i) {
-			   		return xScale(i) + 14;
+			   		return xScale(i) + xScale.rangeBand() / 4;
 			   })
 		    	.attr("y", function(d) {
 			   		return h - d * 4 + 14;
