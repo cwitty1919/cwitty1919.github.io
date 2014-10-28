@@ -17,7 +17,7 @@
 
 		<h1>Welcome to My Website!</h1>
 
-<img src="mypic.jpg" alt="A Picture of Me" style="width:304px;height:228px">
+<img src="mypic.jpg" alt="A Picture of Me" style="width:304px;height:304px">
 
 		<h2>About Me</h2>
 
@@ -84,7 +84,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
         return xScale(i) + xScale.rangeBand() / 4;
    })
    .attr("y", function(d) {
-        return h - d * 4 + 14;
+        return h - d * 4;
    });
 		  //New data successfully bound, sir!
     });			
@@ -122,7 +122,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 			   		return xScale(i) + xScale.rangeBand() / 4;
 			   })
 		    	.attr("y", function(d) {
-			   		return h - d * 4 + 14;
+			   		return h - d * 4;
 			   })
 		        .attr("font-family", "sans-serif")
     			.attr("font-size", "11px")
