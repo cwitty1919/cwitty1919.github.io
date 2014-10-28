@@ -79,7 +79,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
         return d;
    })
    .attr("x", function(d, i) {
-        return xScale(i) + xScale.rangeBand() / 4;
+        return xScale(i) + xScale.rangeBand() / 2;
    })
    .attr("y", function(d) {
         return h - d * 4 - xScale.rangeBand();
@@ -117,7 +117,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 		    	.append("text")
 		    	.text(function (d) {return d; } )
 		    	.attr("x", function(d, i) {
-			   		return xScale(i) + xScale.rangeBand() / 4;
+			   		return xScale(i) + xScale.rangeBand() / 2;
 			   })
 		    	.attr("y", function(d) {
 			   		return h - d * 4 - xScale.rangeBand();
