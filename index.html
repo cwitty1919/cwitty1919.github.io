@@ -19,11 +19,11 @@
 
 		<h2>About Me</h2>
 
-		<p>I am a senior at CU Boulder studying computer science and economics. My areas of interest are software development and database administration. My other interests include music, guitar, rock climbing, martial arts, and travel.</p>
+		<p1>I am a senior at CU Boulder studying computer science and economics. My areas of interest are software development and database administration. My other interests include music, guitar, rock climbing, martial arts, and travel.</p1>
 
-		<p1>Click on this text to update the chart with new data values
-as many times as you like!</p1>
-	<script type="text/javascript">
+		<p>Click on this text to update the chart with new data values
+as many times as you like!</p>
+<script type="text/javascript">
 
 			//Width and height
 			var w = 500;
@@ -36,7 +36,7 @@ as many times as you like!</p1>
 			var yScale = d3.scale.linear()
             .domain(d3.range(dataset.max));
 
-			d3.select("p1")
+			d3.select("p")
     .on("click", function() {
         //Do something mundane and annoying on click
         //New values for dataset
@@ -46,6 +46,9 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
     var newNumber = Math.floor(Math.random() * 25); //New random integer (0-24)
     dataset.push(newNumber);                        //Add new number to array
 }
+
+        svg.selectAll("rect")
+   .data(dataset); 
 
    	svg.selectAll("rect")
 			   .data(dataset)
