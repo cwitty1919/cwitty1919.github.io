@@ -27,7 +27,7 @@ as many times as you like!</p>
 
 			//Width and height
 			var w = 500;
-			var h = 500;
+			var h = 100;
 			
 			var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
 							11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
@@ -65,8 +65,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 			   })
 			   .attr("fill", function(d) {   // <-- Down here!
         			return "rgb(0, 0, " + (d * 10) + ")";
-                });
-                
+                }); 
 
         svg.selectAll("text")
    .data(dataset)
@@ -83,7 +82,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
         return xScale(i) + xScale.rangeBand() / 4;
    })
    .attr("y", function(d) {
-        return h - d * 4 - + 14;
+        return h - d * 4 + 14;
    });
 		  //New data successfully bound, sir!
     });			
@@ -110,7 +109,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 			   })
 			   .attr("fill", function(d) {   // <-- Down here!
         			return "rgb(0, 0, " + (d * 10) + ")";
-                });
+                }); 
 
 		    svg.selectAll("text")
 		    	.data(dataset)
