@@ -129,8 +129,8 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 			   .data(dataset)
 			   .enter()
 			   .append("circle")
-			   .attr("cx", function(d) {
-			   		return xScale(i) / 2;
+			   .attr("cx", .attr("x", function(d, i) {
+			   		return xScale(i);
 			   })
 			   .attr("cy", function(d) {
 			   		return h - d * 4 + 12;
@@ -143,8 +143,8 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 		    	.append("text")
 		    	.text(function (d) {return d; } )
 		    	.attr("x", function(d, i) {
-        			return xScale(i) + xScale.rangeBand() / 2;
-   				})
+			   		return xScale(i);
+			   })
    			.attr("y", function(d) {
         			return h - d * 4 + 12;
    				})
