@@ -47,6 +47,7 @@ as many times as you like!</p>
 			//Width and height
 			var w = 500;
 			var h = 200;
+			var counter = 0;
 			
 			var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
 							11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
@@ -59,6 +60,7 @@ as many times as you like!</p>
     .on("click", function() {
         //Do something mundane and annoying on click
         //New values for dataset
+counter = counter + 1;        
 var numValues = dataset.length;               //Count original length of dataset
 dataset = [];                                       //Initialize empty array
 for (var i = 0; i < numValues; i++) {               //Loop numValues times
@@ -82,8 +84,12 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 			   .attr("height", function(d) {
 			   		return d * 4;
 			   })
-			   .attr("fill", function(d) {   // <-- Down here!
-        			return "rgb(0, 0, " + (d * 10) + ")";
+			   .attr("fill", function(d) {
+			   		if (counter % 2 == 0){
+			   			return "rgb(" + (d * 10) + ", 0, 0)";
+			   		} else{   // <-- Down here!
+        				return "rgb(0, 0, " + (d * 10) + ")";
+        			}
                 }); 
 
         svg.selectAll("text")
