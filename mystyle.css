@@ -1,0 +1,42 @@
+
+
+h1 {
+	background-color:brown;
+	color:tan;
+	text-align:center;
+	padding: 5px;
+	}
+
+h2 {
+	background-color:brown;
+    color:tan;
+    text-align:left;
+    padding:5px;
+}
+
+p, p1 {
+	color: tan;
+}
+
+			
+/* unvisited link */
+a:link {
+    color: tan;
+}
+
+/* visited link */
+a:visited {
+    color: tan;
+}
+
+/* mouse over link */
+a:hover {
+    color: red;
+}
+
+/* selected link */
+a:active {
+    color: brown;
+
+}
+	
