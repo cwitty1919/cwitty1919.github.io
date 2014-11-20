@@ -2,36 +2,59 @@
 
 h1 {
 	background-color:brown;
-	color:tan;
+	color: tan;
 	text-align:center;
-	padding: 5px;
 	}
 
 h2 {
 	background-color:brown;
     color:tan;
     text-align:left;
-    padding:5px;
+}	
+
+body{
+	background-image: url("background.jpg");
 }
 
-body {
-    background-image: url("background.jpg");
+ul {
+    list-style-type: none;
+    margin: 8px;
+    padding: 0;
 }
+
+li {
+	float: left;
+	width: 25%;
+}
+
+a.img {
+	display: inline-block;
+    color: tan;
+    background-color: brown;
+    text-align: center;
+    padding: 4px;
+}	
+
+a:link, a:visited {
+    display: inline-block;
+    font-weight: bold;
+    color: tan;
+    background-color: brown;
+    width: 233px;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover, a:active {
+    background-color: tan;
+}				
 
 p, p1 {
 	color: tan;
 }
-
-			
-/* unvisited link */
-a:link {
-    color: tan;
-}
-
-/* visited link */
-a:visited {
-    color: tan;
-}
+	
 
 /* mouse over link */
 a:hover {
