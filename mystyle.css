@@ -27,13 +27,16 @@ li {
 	width: 25%;
 }
 
-.external {
-	display: inline-block;
-    color: none;
-    text-align: center;
+.external:hover {
+background-color: tan;
+background-size: 115px 115px;
 }
 
-a:link, a:visited {
+a.internalz:hover, a.contact:active{
+    color: brown;
+}
+
+   a.internal, a:visited {
     display: inline-block;
     font-weight: bold;
     color: tan;
@@ -45,23 +48,13 @@ a:link, a:visited {
     text-transform: uppercase;
 }
 
-a:hover, a:active {
+a.internal:hover, a:active {
     background-color: tan;
+    color: brown;
 }				
 
 p, p1 {
 	color: tan;
 }
 	
-
-/* mouse over link */
-a:hover {
-    color: red;
-}
-
-/* selected link */
-a:active {
-    color: brown;
-
-}
 	
