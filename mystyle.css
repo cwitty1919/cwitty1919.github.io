@@ -1,10 +1,16 @@
 
+h1.title {
+    color: tan;
+    background-color:none;
+    text-align:left;
+    }
 
 h1 {
 	background-color:brown;
 	color: tan;
 	text-align:center;
 	}
+
 
 h2 {
 	background-color:brown;
