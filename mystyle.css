@@ -1,25 +1,12 @@
+img.background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
 
-h1.title {
-    color: tan;
-    background-color:none;
-    text-align:left;
-    }
-
-h1 {
-	background-color:brown;
-	color: tan;
-	text-align:center;
-	}
-
-
-h2 {
-	background-color:brown;
-    color:tan;
-    text-align:left;
-}	
-
-body{
-	background-image: url("background.jpg");
+p {
+    color: white;
 }
 
 ul {
@@ -29,8 +16,8 @@ ul {
 }
 
 li {
-	float: left;
-	width: 25%;
+    float: left;
+    width: 25%;
 }
 
 .external:hover {
@@ -38,15 +25,26 @@ background-color: tan;
 background-size: 115px 115px;
 }
 
-a.internalz:hover, a.contact:active{
-    color: brown;
+a {
+    color: beige;
+}
+
+
+ a.internal2, a:visited {
+    display: inline-block;
+    font-weight: bold;
+    color: beige;
+    width: 100px;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
    a.internal, a:visited {
     display: inline-block;
     font-weight: bold;
-    color: tan;
-    background-color: brown;
+    color: beige;
     width: 243px;
     text-align: center;
     padding: 4px;
@@ -54,13 +52,19 @@ a.internalz:hover, a.contact:active{
     text-transform: uppercase;
 }
 
-a.internal:hover, a:active {
-    background-color: tan;
+a.internal:hover, a:active, a.current {
+    display: inline-block;
+    font-weight: bold;
     color: brown;
-}				
+    background-color: tan; 
+    width: 243px;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}               
 
-p, p1 {
-	color: tan;
+
+h1 {
+    color: beige;
 }
-	
-	
