@@ -55,7 +55,7 @@ a {
     text-transform: uppercase;
 }
 
-a.internal:hover, a:active, a.current {
+a.internal:hover, a.internal:active, a.current {
     display: inline-block;
     font-weight: bold;
     color: brown;
