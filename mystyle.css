@@ -65,7 +65,26 @@ a.internal:hover, a.internal:active, a.current {
     padding: 4px;
     text-decoration: none;
     text-transform: uppercase;
-}               
+}
+
+ a.internal:active, a.current {
+    display: inline-block;
+    color: brown;
+    background-color: tan; 
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}  
+
+a.button:hover {
+    font-weight: bold;
+    color: brown;
+    background-color: tan; 
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+}              
 
 
 h1 {
