@@ -9,29 +9,38 @@
 	<style>
 	body {
     background: url("background.jpg");
-        background-size: 100% 219%;
+        background-size: 100% 175%;
     background-repeat: no-repeat;
 }
 	</style>
 	<body>
-    	<ul>
-  			<li><a class="internal"href="index.html">Home</a></li>
+		<ul>
+  			<li><a class="internal" href="index.html">Home</a></li>
             <li><a class="internal" href="about_me.html">About Me</a></li>
-			<li><a class="current"href="projects.html">Projects</a></li>
-  			<li><a class="internal"href="contact.html">Contact</a></li>
+			<li><a class="current" href="projects.html">Projects</a></li>
+  			<li><a class="internal" href="contact.html">Contact</a></li>
 		</ul>
-        &nbsp;
-		&nbsp;
-		&nbsp;
-		&nbsp;
-		&nbsp;
-		&nbsp;
-		&nbsp;
-		&nbsp;
-		&nbsp;
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<p1>As a software consultant at SSP Innovations, I co-wrote the following articles for the company blog about projects I worked on:</p1>
+		<br>
+		<br>
+		<br>
+		<ul>
+  			<li><a class="article" href="http://www.sspinnovations.com/blog/2015/02/05/arcgis-arcfm-upgrade-tips-part-1-ie-compatibility-mode#.VZMO6-uZ420">ArcGIS / ArcFM Upgrade Tips Part 1 - IE Compatibility Mode</a></li>
+            <li><a class="article" href="http://www.sspinnovations.com/blog/2015/05/11/enhancements-ssps-all-edits-tool-9#.VZMPDeuZ420">How We Made Our All Edits Tool Even Better</a></li>
+			<li><a class="article" href="http://www.sspinnovations.com/blog/2015/05/10/pinpoint-issues-between-arcfm-environments-handy-tool#.VZMPJ-uZ420">Pinpoint issues between ArcFM environments with this handy tool</a></li>
+  			<li><a class="article" href="http://www.sspinnovations.com/blog/2015/05/11/5-things-i-wish-i-knew-i-started-using-arcgis-and-arcmap#.VZMPY-uZ420">5 Things I Wish I Knew Before I Started Using ArcGIS and ArcMap</a></li>
+		</ul>
+		<br>
+		<br>
+		<br>
+		<br>
 		<p>Below is a dynamic graph I created for my Big Data class. Click on this text to update the chart with new data values
 as many times as you like!</p>
-
 		<script type="text/javascript">
 
 			//Width and height
@@ -47,63 +56,63 @@ as many times as you like!</p>
             .domain(d3.range(dataset.max));
 
 			d3.select("p")
-    .on("click", function update() {
-        //Updates Graph
-counter = counter + 1;        
-var numValues = dataset.length;               //Count original length of dataset
-dataset = [];                                       //Initialize empty array
-for (var i = 0; i < numValues; i++) {               //Loop numValues times
-    var newNumber = Math.floor(Math.random() * 25); //New random integer (0-24)
-    dataset.push(newNumber);                        //Add new number to array
-}
+		    .on("click", function update() {
+		        //Updates Graph
+		counter = counter + 1;        
+		var numValues = dataset.length;               //Count original length of dataset
+		dataset = [];                                       //Initialize empty array
+		for (var i = 0; i < numValues; i++) {               //Loop numValues times
+		    var newNumber = Math.floor(Math.random() * 25); //New random integer (0-24)
+		    dataset.push(newNumber);                        //Add new number to array
+		}
 
-        svg.selectAll("rect")
-   .data(dataset); 
+		        svg.selectAll("rect")
+		   .data(dataset); 
 
-   	svg.selectAll("rect")
-			   .data(dataset)
-			   .transition()
-			   .delay(function (d,i){
-   			   	return i * 100;
-   			   })
-   			   .duration(1000)
-			   .attr("y", function(d) {
-			   		return h - d * 4;
-			   }) 
-			   .attr("height", function(d) {
-			   		return d * 4;
-			   })
-			   .attr("fill", function(d) {
-			   		if (counter % 3 == 0){
-			   			counter = 0;
-			   			return "rgb( 0, "  + (d * 10) + ", 0)";
-			   		} else if (counter % 2 == 0){
-			   			return "rgb( " + (d * 10) + ", 0, 0)";
-			   		} else{   // <-- Down here!
-        				return "rgb( 0, 0, " + (d * 10) + ")";
-        			}
-                }); 
+		   	svg.selectAll("rect")
+					   .data(dataset)
+					   .transition()
+					   .delay(function (d,i){
+		   			   	return i * 100;
+		   			   })
+		   			   .duration(1000)
+					   .attr("y", function(d) {
+					   		return h - d * 4;
+					   }) 
+					   .attr("height", function(d) {
+					   		return d * 4;
+					   })
+					   .attr("fill", function(d) {
+					   		if (counter % 3 == 0){
+					   			counter = 0;
+					   			return "rgb( 0, "  + (d * 10) + ", 0)";
+					   		} else if (counter % 2 == 0){
+					   			return "rgb( " + (d * 10) + ", 0, 0)";
+					   		} else{   // <-- Down here!
+		        				return "rgb( 0, 0, " + (d * 10) + ")";
+		        			}
+		                }); 
 
-        svg.selectAll("text")
-   .data(dataset)
-   .transition()
-   .delay(function (d,i){
-   		return i * 100;
-   })        
-   .duration(5000)
-   .ease('bounce') 
-   .text(function(d) {
-        return d;
-   })
-   .attr("x", function(d, i) {
-        return xScale(i) + xScale.rangeBand() / 4;
-   })
-   .attr("y", function(d) {
-        return h - d * 4;
-   });
-		  //New data successfully bound.
-    });			
-			
+		        svg.selectAll("text")
+		   .data(dataset)
+		   .transition()
+		   .delay(function (d,i){
+		   		return i * 100;
+		   })        
+		   .duration(5000)
+		   .ease('bounce') 
+		   .text(function(d) {
+		        return d;
+		   })
+		   .attr("x", function(d, i) {
+		        return xScale(i) + xScale.rangeBand() / 4;
+		   })
+		   .attr("y", function(d) {
+		        return h - d * 4;
+		   });
+				  //New data successfully bound.
+		    });			
+					
 			//Create SVG element
 			var svg = d3.select("body")
 						.append("svg")
@@ -142,9 +151,7 @@ for (var i = 0; i < numValues; i++) {               //Loop numValues times
 		        .attr("font-family", "sans-serif")
     			.attr("font-size", "11px")
     			.attr("fill", "white");
-
 			
-		</script>
-
+	</script>
 </body>
 </html>

@@ -12,6 +12,11 @@ p {
     color: beige;
 }
 
+p1 {
+    color: beige;
+    float: left;
+}
+
 ul {
     list-style-type: none;
     margin: 8px;
@@ -77,13 +82,19 @@ a.internal:hover, a.internal:active, a.current {
     text-transform: uppercase;
 }  
 
-a.button:hover {
+a.button:hover, a.article:hover {
     font-weight: bold;
     color: brown;
     background-color: tan; 
     text-align: center;
     padding: 4px;
     text-decoration: none;
+}
+
+a.article {
+    display: block;
+    text-align: center;
+    padding: 4px;
 }              
 
 
